@@ -2,7 +2,8 @@
 
 # My Portfolio
  This is my personal portfolio at Microverse.
- ![Screenshot_final](https://user-images.githubusercontent.com/57297709/148352117-08808df2-1575-440c-b09c-3d01f781b1c5.jpg)
+
+![Screenshot_final](https://user-images.githubusercontent.com/57297709/148350802-4f2f1f9b-408f-4115-89f7-6e712151a612.jpg)
 
 
 ## Built With

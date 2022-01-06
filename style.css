@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary: #6070ff;
+  --secondary: #7f8cff;
+  --neutral: #344563;
+  --neutral-icons: #505f79;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
+.navbar .logo {
+  color: var(--primary);
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.navbar .fa-bars {
+  color: var(--primary);
+  font-size: 16px;
+}
+
+.main {
+  background: url(img/header-shapes-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 7rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.main h1 {
+  font-size: 40px;
+  line-height: 52px;
+  font-weight: bold;
+  color: var(--neutral);
+}
+
+.main p {
+  font-size: 16px;
+  line-height: 24px;
+  padding: 12px 0;
+  color: var(--neutral);
+}
+
+.main a {
+  text-transform: uppercase;
+  color: var(--secondary);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.main .main-icons {
+  padding-top: 5px;
+}
+
+.main .main-icons ul {
+  display: flex;
+  justify-content: space-between;
+  width: 180px;
+}
+
+.main .main-icons ul li a {
+  font-size: 28px;
+  color: var(--neutral-icons);
+}
