@@ -1,8 +1,9 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # My Portfolio
+ This is my personal portfolio at Microverse.
+ ![Screenshot_final](https://user-images.githubusercontent.com/57297709/148352117-08808df2-1575-440c-b09c-3d01f781b1c5.jpg)
 
-> This is my personal portfolio at Microverse.
 
 ## Built With
 
