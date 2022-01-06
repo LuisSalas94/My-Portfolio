@@ -15,14 +15,14 @@ body {
 :root {
   --primary: #6070ff;
   --secondary: #7f8cff;
-  --neutral: #172b4d;
+  --neutral: #344563;
   --neutral-icons: #505f79;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 1.8rem 1.5rem;
+  padding: 0 1.5rem;
   width: 100%;
 }
 
@@ -42,7 +42,7 @@ body {
   background: url(img/header-shapes-mobile.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 4rem 1.5rem;
+  padding: 7rem 1.5rem;
   display: flex;
   flex-direction: column;
 }
@@ -75,10 +75,10 @@ body {
 .main .main-icons ul {
   display: flex;
   justify-content: space-between;
-  width: 200px;
+  width: 180px;
 }
 
 .main .main-icons ul li a {
-  font-size: 20px;
+  font-size: 28px;
   color: var(--neutral-icons);
 }
