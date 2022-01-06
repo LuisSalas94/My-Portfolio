@@ -1,84 +1,203 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-decoration: none;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+	font-family: "Poppins", sans-serif;
 }
 
 :root {
-  --primary: #6070ff;
-  --secondary: #7f8cff;
-  --neutral: #344563;
-  --neutral-icons: #505f79;
+	--primary: #6070ff;
+	--secondary: #7f8cff;
+	--neutral: #344563;
+	--neutral-icons: #505f79;
+	--neutral-card: #172b4d;
+	--neutralsN50: #c1c7d0;
+	--neutralsN100: #7a869a;
+	--primaryB50: #ebebff;
+	--primaryB500: #396df2;
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 1.5rem;
-  width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 1.5rem;
+	width: 100%;
 }
 
 .navbar .logo {
-  color: var(--primary);
-  font-size: 18px;
-  line-height: 20px;
-  font-weight: bold;
+	color: var(--primary);
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: bold;
 }
 
 .navbar .fa-bars {
-  color: var(--primary);
-  font-size: 16px;
+	color: var(--primary);
+	font-size: 16px;
 }
 
 .main {
-  background: url(img/header-shapes-mobile.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 7rem 1.5rem;
-  display: flex;
-  flex-direction: column;
+	background: url(img/header-shapes-mobile.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 7rem 1.5rem;
+	display: flex;
+	flex-direction: column;
 }
 
 .main h1 {
-  font-size: 40px;
-  line-height: 52px;
-  font-weight: bold;
-  color: var(--neutral);
+	font-size: 40px;
+	line-height: 52px;
+	font-weight: bold;
+	color: var(--neutral);
 }
 
 .main p {
-  font-size: 16px;
-  line-height: 24px;
-  padding: 12px 0;
-  color: var(--neutral);
+	font-size: 16px;
+	line-height: 24px;
+	padding: 12px 0;
+	color: var(--neutral);
 }
 
 .main a {
-  text-transform: uppercase;
-  color: var(--secondary);
-  font-weight: 500;
-  font-size: 16px;
+	text-transform: uppercase;
+	color: var(--secondary);
+	font-weight: 500;
+	font-size: 16px;
 }
 
 .main .main-icons {
-  padding-top: 5px;
+	padding-top: 5px;
 }
 
 .main .main-icons ul {
-  display: flex;
-  justify-content: space-between;
-  width: 180px;
+	display: flex;
+	justify-content: space-between;
+	width: 180px;
 }
 
 .main .main-icons ul li a {
-  font-size: 28px;
-  color: var(--neutral-icons);
+	font-size: 28px;
+	color: var(--neutral-icons);
+}
+
+/* Works Section */
+.works {
+	width: 380px;
+	background-color: #f7f7f9;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(4, 1fr);
+	gap: 70px;
+	padding: 20px;
+}
+
+.works .card {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-around;
+	margin: 0 auto;
+	width: 327px;
+	height: 552px;
+	background-color: #fff;
+	padding: 8px 16px;
+	border-radius: 16px;
+	border: 1px solid #dfe1e6;
+}
+
+.works .card img {
+	width: 295px;
+	height: 200px;
+	border-radius: 8px;
+	object-fit: cover;
+}
+
+.card h1 {
+	font-size: 32px;
+	line-height: 44px;
+	font-weight: 700;
+	color: var(--neutral-card);
+	padding: 8px 0;
+}
+
+.card .card-details {
+	display: flex;
+	align-items: center;
+}
+
+.card .card-details h3 {
+	font-size: 13px;
+	line-height: 16px;
+	font-weight: 600;
+	color: var(--neutral);
+	text-transform: uppercase;
+}
+
+.card .card-details i {
+	font-size: 8px;
+	color: var(--neutralsN50);
+	padding: 0 13px;
+}
+
+.card .card-details h4 {
+	font-size: 13px;
+	line-height: 16px;
+	text-transform: capitalize;
+	font-weight: 600;
+	color: var(--neutralsN100);
+}
+
+.card .card-description {
+	padding-top: 10px;
+	font-size: 15px;
+	line-height: 24px;
+	font-weight: 400;
+	color: var(--neutral);
+}
+
+.works .card-skills {
+	padding: 20px 0;
+}
+
+.works .card-skills ul {
+	width: 200px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.works .card-skills ul li {
+	padding: 1px 10px;
+	background-color: var(--primaryB50);
+	margin: 0 3px;
+	border-radius: 8px;
+}
+
+.works .card-skills ul li a {
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 16px;
+	color: var(--primary);
+}
+
+.works .card button {
+	font-size: 17px;
+	line-height: 24px;
+	text-transform: capitalize;
+	background: transparent;
+	color: var(--primaryB500);
+	border: 1.8px solid var(--primaryB500);
+	cursor: pointer;
+	border-radius: 8px;
+	padding: 8px 10px;
+	font-weight: 600;
+	margin-bottom: 15px;
+	letter-spacing: 0.03em;
 }
