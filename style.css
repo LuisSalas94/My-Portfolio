@@ -212,17 +212,14 @@ body {
 }
 
 .works .card-skills ul li {
-  padding: 1px 10px;
-  background-color: var(--primaryB50);
-  margin: 0 3px;
   border-radius: 8px;
-}
-
-.works .card-skills ul li a {
   font-weight: 500;
+  background-color: var(--primaryB50);
   font-size: 12px;
+  margin: 0 4px;
   line-height: 16px;
   color: var(--primary);
+  padding: 5px 12px;
 }
 
 .about {
@@ -284,7 +281,7 @@ body {
 }
 
 .about .main-skill h2 {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 24px;
   color: #000;
   font-weight: 500;
