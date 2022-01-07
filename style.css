@@ -29,9 +29,8 @@ body {
   --primaryB500: #396df2;
 }
 
-
-.btn{
-   font-size: 17px;
+.btn {
+  font-size: 17px;
   line-height: 24px;
   text-transform: capitalize;
   background: transparent;
@@ -43,23 +42,23 @@ body {
   font-weight: 600;
   margin-bottom: 15px;
   letter-spacing: 0.03em;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 /* hover */
-.btn:hover{
+.btn:hover {
   background-color: var(--primary);
   color: #fff;
 }
 
 /* pressed */
-.btn:active{
-   background-color: var(--primaryColor1);
+.btn:active {
+  background-color: var(--primaryColor1);
   color: #fff;
 }
 
 /* disabled */
-.btn:disabled{
+.btn:disabled {
   background-color: #fff;
   color: var(--neutral5);
 }
@@ -253,7 +252,6 @@ body {
   font-weight: 500;
   font-size: 16px;
 }
-
 
 .about .main-icons ul {
   display: flex;
