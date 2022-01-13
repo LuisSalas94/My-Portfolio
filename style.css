@@ -33,6 +33,8 @@ body {
 	--primaryB500: #396df2;
 }
 
+/* **************************** General Styles ************************************ */
+
 .btn {
 	font-size: 17px;
 	line-height: 24px;
@@ -67,6 +69,8 @@ body {
 	color: var(--neutral5);
 }
 
+/* **************************** Navbar Section ************************************ */
+
 .navbar {
 	display: flex;
 	justify-content: space-between;
@@ -86,6 +90,8 @@ body {
 	color: var(--primary);
 	font-size: 16px;
 }
+
+/* **************************** Main Section ************************************ */
 
 .main {
 	background: url(img/header-shapes-mobile.svg);
@@ -135,7 +141,8 @@ body {
 	color: var(--neutral-icons);
 }
 
-/* Mobile Starts here */
+/* **************************** Works Section ************************************ */
+
 .works {
 	width: 100%;
 	background-color: #f7f7f9;
@@ -143,7 +150,7 @@ body {
 	grid-template-columns: 1fr;
 	grid-template-rows: repeat(4, 1fr);
 	gap: 70px;
-	padding: 20px;
+	padding: 80px;
 }
 
 .works .card {
@@ -179,8 +186,6 @@ body {
 	display: flex;
 	align-items: center;
 }
-
-/* Mobile Finishes here */
 
 .card .card-details h3 {
 	font-size: 13px;
@@ -233,10 +238,12 @@ body {
 	padding: 5px 12px;
 }
 
+/* **************************** About Section ************************************ */
+
 .about {
 	width: 380px;
 	background-color: #fff;
-	padding: 80px 20px;
+	padding: 100px 20px;
 }
 
 .about h1 {
@@ -354,6 +361,8 @@ button {
 	color: var(--neutralsN700);
 	margin-left: 10px;
 }
+
+/* **************************** Form Section ************************************ */
 
 .form {
 	font-family: Poppins, "Times New Roman", Times, serif;
@@ -488,7 +497,12 @@ button {
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		padding: 5% 8%;
+		padding: 14% 8%;
+	}
+
+	.form {
+		margin-top: 30px;
+		width: 100%;
 	}
 }
 
@@ -584,7 +598,7 @@ button {
 	}
 
 	.works .card {
-		padding: 0 20px;
+		padding: 10px 20px;
 		width: 60%;
 		height: 496px;
 		border-radius: 24px;
