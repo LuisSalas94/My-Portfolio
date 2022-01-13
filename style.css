@@ -420,6 +420,10 @@ button {
 }
 
 /* *************************** Desktop Version ***************************************** */
+@media screen and (max-width: 990px) {
+}
+
+/* *************************** Desktop Version ***************************************** */
 @media screen and (min-width: 1080px) {
 	body {
 		overflow-x: hidden;
@@ -512,15 +516,15 @@ button {
 		border-radius: 24px;
 		background: #fff;
 		border: 1px solid #dfe1e6;
-		display: flex;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 		align-items: center;
-		justify-content: center;
 	}
 
 	.works .card img {
-		padding: 0 10px;
-		width: 45%;
-		height: 450px;
+		padding: 10px;
+		width: 100%;
+		height: 100%;
 		object-fit: fill;
 	}
 
