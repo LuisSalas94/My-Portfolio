@@ -421,17 +421,33 @@ button {
 
 /* *************************** Desktop Version ***************************************** */
 @media screen and (max-width: 990px) {
+	.navbar {
+		padding: 3%;
+	}
+
+	.navbar nav ul li.desktop {
+		display: none;
+	}
+
+	.navbar nav ul li.icon {
+		display: block;
+	}
 }
 
 /* *************************** Desktop Version ***************************************** */
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 991px) {
 	body {
 		overflow-x: hidden;
 	}
 
 	/* ********** Navbar Section*************** */
+
 	.navbar {
 		padding: 2rem 5%;
+	}
+
+	.navbar nav ul li.icon {
+		display: none;
 	}
 
 	.navbar ul {
