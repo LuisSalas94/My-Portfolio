@@ -14,9 +14,13 @@ body {
 
 :root {
   --primary: #6070ff;
+  --primaryb500: #4053fc;
   --primaryColor1: #2230d2;
   --secondary: #7f8cff;
   --neutral: #344563;
+  --neutrals1: #091e42;
+  --neutrals3: #344563;
+  --neutrals6: #6b778c;
   --neutral5: #5e6c84;
   --neutralsN10: #f7f7f9;
   --neutral-icons: #505f79;
@@ -28,6 +32,8 @@ body {
   --primaryB50: #ebebff;
   --primaryB500: #396df2;
 }
+
+/* **************************** General Styles ************************************ */
 
 .btn {
   font-size: 17px;
@@ -63,6 +69,8 @@ body {
   color: var(--neutral5);
 }
 
+/* **************************** Navbar Section ************************************ */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -71,6 +79,7 @@ body {
 }
 
 .navbar .logo {
+  font-family: Poppins, "Times New Roman", Times, serif;
   color: var(--primary);
   font-size: 18px;
   line-height: 20px;
@@ -82,8 +91,11 @@ body {
   font-size: 16px;
 }
 
+/* **************************** Main Section ************************************ */
+
 .main {
   background: url(img/header-shapes-mobile.svg);
+  width: 100vw;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 7rem 1.5rem;
@@ -106,10 +118,12 @@ body {
 }
 
 .main a {
+  font-family: Poppins, "Times New Roman", Times, serif;
   text-transform: uppercase;
   color: var(--secondary);
   font-weight: 500;
   font-size: 16px;
+  line-height: 24px;
 }
 
 .main .main-icons {
@@ -127,14 +141,16 @@ body {
   color: var(--neutral-icons);
 }
 
+/* **************************** Works Section ************************************ */
+
 .works {
-  width: 380px;
+  width: 100%;
   background-color: #f7f7f9;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, 1fr);
   gap: 70px;
-  padding: 20px;
+  padding: 80px;
 }
 
 .works .card {
@@ -144,7 +160,7 @@ body {
   justify-content: space-around;
   margin: 0 auto;
   width: 327px;
-  height: 552px;
+  height: 560px;
   background-color: #fff;
   padding: 8px 16px;
   border-radius: 16px;
@@ -222,10 +238,12 @@ body {
   padding: 5px 12px;
 }
 
+/* **************************** About Section ************************************ */
+
 .about {
   width: 380px;
   background-color: #fff;
-  padding: 80px 20px;
+  padding: 100px 20px;
 }
 
 .about h1 {
@@ -244,10 +262,12 @@ body {
 }
 
 .connect {
+  font-family: Poppins, "Times New Roman", Times, serif;
   text-transform: uppercase;
   color: var(--secondary);
   font-weight: 500;
   font-size: 16px;
+  line-height: 24px;
 }
 
 .about .main-icons ul {
@@ -341,6 +361,8 @@ button {
   color: var(--neutralsN700);
   margin-left: 10px;
 }
+
+/* **************************** Form Section ************************************ */
 
 .form {
   font-family: Poppins, "Times New Roman", Times, serif;
@@ -451,4 +473,404 @@ button {
 .form .btn:disabled {
   background-color: #fff;
   color: var(--neutral5);
+}
+
+/* *************************** Mobile Version ***************************************** */
+@media screen and (max-width: 990px) {
+  .navbar {
+    padding: 3%;
+  }
+
+  .navbar nav ul li.desktop {
+    display: none;
+  }
+
+  .navbar nav ul li.icon {
+    display: block;
+  }
+
+  .works .card .card-skills .ruby {
+    display: none;
+  }
+
+  .about {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 14% 8%;
+  }
+
+  .form {
+    margin-top: 30px;
+    width: 100%;
+  }
+}
+
+/* *************************** Desktop Version ***************************************** */
+@media screen and (min-width: 991px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  /* ********** Navbar Section*************** */
+
+  .navbar {
+    padding: 2rem 5%;
+  }
+
+  .navbar nav ul li.icon {
+    display: none;
+  }
+
+  .navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar ul li {
+    margin: 0 10px;
+  }
+
+  .navbar ul li a {
+    font-family: Poppins, "Times New Roman", Times, serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    color: var(--neutral);
+  }
+
+  .main {
+    width: 100%;
+    height: 916px;
+    padding: 7rem 7.5rem;
+  }
+
+  .main .main-container {
+    padding: 0 80px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .main p {
+    font-family: Poppins, "Times New Roman", Times, serif;
+    font-size: 20px;
+    font-style: normal;
+    line-height: 28px;
+    padding: 12px 0;
+    color: var(--neutrals3);
+  }
+
+  .form p {
+    width: 569px;
+    height: 102px;
+    margin: 15px 0;
+  }
+
+  .main .main-container p {
+    width: 90%;
+    font-family: Poppins, "Times New Roman", Times, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .main .main-container .main-icons {
+    padding-top: 10px;
+  }
+
+  .main h1 {
+    font-family: Poppins, "Times New Roman", Times, serif;
+    font-size: 48px;
+    font-style: normal;
+    line-height: 60px;
+    font-weight: bold;
+    color: var(--neutrals1);
+  }
+
+  /* ********** Works Section *************** */
+  .works {
+    background-color: #f4f5f7;
+    padding: 80px 0;
+    width: 100%;
+    display: grid;
+    gap: 100px;
+    place-items: center;
+  }
+
+  .works .card {
+    padding: 10px 20px;
+    width: 60%;
+    height: 496px;
+    border-radius: 24px;
+    background: #fff;
+    border: 1px solid #dfe1e6;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .works .card img {
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+
+  .works .card .card-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 25px;
+  }
+
+  .works .card .card-container .unique {
+    background-color: var(--primaryb500);
+    color: #fff;
+  }
+
+  .works .card .card-container .unique:hover {
+    background-color: var(--primary);
+  }
+
+  .works .card .card-details {
+    padding: 10px 0;
+  }
+
+  .works .card .card-container .card-details {
+    display: flex;
+    align-items: center;
+  }
+
+  .about .about-content h1 {
+    font-family: Poppins, "Times New Roman", Times, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 52px;
+    color: var(--neutrals1);
+  }
+
+  .works .card .card-container h1 {
+    font-family: Poppins, "Times New Roman", Times, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 52px;
+    color: var(--neutrals1);
+  }
+
+  .form form .btn {
+    width: 145px;
+    height: 48px;
+    border-radius: 8px;
+    padding: 12px 16px;
+  }
+
+  .works .card .card-container .btn {
+    margin-top: 25px;
+  }
+
+  .works .card .card-details h3 {
+    font-family: Poppins, "Times New Roman", Times, serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--neutrals3);
+  }
+
+  .works .card .swap {
+    order: -1;
+  }
+
+  .works .card .card-details h4 {
+    font-family: Poppins, "Times New Roman", Times, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--neutrals6);
+  }
+
+  .works .card .card-description {
+    font-family: Poppins, "Times New Roman", Times, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--neutral);
+  }
+
+  .works .card .card-skills ul {
+    width: 350px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .works .card .card-skills ul li {
+    font-family: Poppins, "Times New Roman", Times, serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--primary);
+  }
+
+  /* ************************ About Section ******************************** */
+  .about {
+    width: 100%;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8%;
+  }
+
+  .about .about-content {
+    margin-top: 100px;
+    flex: 1 1 50%;
+    padding: 10px;
+  }
+
+  .about .main-skill {
+    width: 100%;
+    display: flex;
+  }
+
+  .about .about-content p {
+    font-family: Poppins, "Times New Roman", Times, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--neutral);
+  }
+
+  .about .about-content .connect {
+    padding: 12px 0;
+  }
+
+  .about .about-content .main-icons {
+    padding: 8px 0;
+  }
+
+  .about .about-skills {
+    margin-top: 110px;
+    flex: 1 1 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about .about-skills .skills-logos {
+    margin: 20px 0;
+  }
+
+  .about .about-skills .skills-logos ul {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding-right: 100px;
+  }
+
+  .about .about-skills .skills-logos ul li {
+    width: 122px;
+    height: 120px;
+    border-radius: 8px;
+    background-color: #f7f7f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+
+  .about .about-skills .skills-logos ul li img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .about .about-skills .skills-logos ul li h4 {
+    font-family: Poppins, "Times New Roman", Times, serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    color: #253858;
+    margin-top: 10px;
+  }
+
+  .about .js {
+    margin-top: 0;
+  }
+
+  .about .css {
+    margin-bottom: 0;
+  }
+
+  .about .html {
+    margin: 0 15px;
+  }
+
+  /* ********** Form Section *************** */
+  .form {
+    width: 100%;
+    height: 846px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .form form .sm-input {
+    width: 447px;
+    height: 48px;
+    border-radius: 2px;
+    border: 1px solid #cfd8dc;
+  }
+
+  .form form .sm-input::placeholder {
+    font-family: Poppins, "Times New Roman", Times, serif;
+    font-style: normal;
+    font-size: 17px;
+    line-height: 20px;
+    color: #172b4d;
+    font-weight: 400;
+  }
+
+  .form form .textarea {
+    width: 447px;
+    height: 170px;
+    border-radius: 2px;
+    border: 1px solid #cfd8dc;
+  }
+
+  .form form .text {
+    width: 100%;
+  }
+
+  .form form .text::placeholder {
+    font-family: Poppins, "Times New Roman", Times, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 24px;
+    color: #b3bac5;
+  }
 }
