@@ -135,6 +135,53 @@ body {
 	color: var(--neutral-icons);
 }
 
+/* Mobile Starts here */
+.works {
+	width: 100%;
+	background-color: #f7f7f9;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(4, 1fr);
+	gap: 70px;
+	padding: 20px;
+}
+
+.works .card {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-around;
+	margin: 0 auto;
+	width: 327px;
+	height: 560px;
+	background-color: #fff;
+	padding: 8px 16px;
+	border-radius: 16px;
+	border: 1px solid #dfe1e6;
+}
+
+.works .card img {
+	width: 295px;
+	height: 200px;
+	border-radius: 8px;
+	object-fit: cover;
+}
+
+.card h1 {
+	font-size: 32px;
+	line-height: 44px;
+	font-weight: 700;
+	color: var(--neutral-card);
+	padding: 8px 0;
+}
+
+.card .card-details {
+	display: flex;
+	align-items: center;
+}
+
+/* Mobile Finishes here */
+
 .card .card-details h3 {
 	font-size: 13px;
 	line-height: 16px;
@@ -419,7 +466,7 @@ button {
 	color: var(--neutral5);
 }
 
-/* *************************** Desktop Version ***************************************** */
+/* *************************** Mobile Version ***************************************** */
 @media screen and (max-width: 990px) {
 	.navbar {
 		padding: 3%;
@@ -431,6 +478,17 @@ button {
 
 	.navbar nav ul li.icon {
 		display: block;
+	}
+
+	.works .card .card-skills .ruby {
+		display: none;
+	}
+
+	.about {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		padding: 5% 8%;
 	}
 }
 
