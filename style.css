@@ -12,6 +12,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 :root {
   --primary: #6070ff;
   --primaryb500: #4053fc;
@@ -475,37 +479,6 @@ button {
   color: var(--neutral5);
 }
 
-/* *************************** Mobile Version ***************************************** */
-@media screen and (max-width: 990px) {
-  .navbar {
-    padding: 3%;
-  }
-
-  .navbar nav ul li.desktop {
-    display: none;
-  }
-
-  .navbar nav ul li.icon {
-    display: block;
-  }
-
-  .works .card .card-skills .ruby {
-    display: none;
-  }
-
-  .about {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 14% 8%;
-  }
-
-  .form {
-    margin-top: 30px;
-    width: 100%;
-  }
-}
-
 /* *************************** Desktop Version ***************************************** */
 @media screen and (min-width: 991px) {
   body {
@@ -872,5 +845,57 @@ button {
     font-size: 15px;
     line-height: 24px;
     color: #b3bac5;
+  }
+}
+
+/* *************************** Mobile Version ***************************************** */
+@media screen and (max-width: 990px) {
+  .navbar {
+    padding: 3%;
+  }
+
+  .navbar nav ul li.desktop {
+    display: none;
+  }
+
+  .navbar nav ul li.icon {
+    display: block;
+  }
+
+  .works .card .card-skills .ruby {
+    display: none;
+  }
+
+  .about {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 14% 8%;
+  }
+
+  .form {
+    margin-top: 30px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 55%;
+  }
+
+  .works {
+    margin: 0 auto;
+  }
+
+  .works .card {
+    width: 100%;
+    height: auto;
+  }
+
+  .works .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
