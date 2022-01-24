@@ -6,6 +6,7 @@
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
+  transition: all 0.2s linear;
 }
 
 body {
@@ -14,6 +15,7 @@ body {
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -78,8 +80,16 @@ html {
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 0 1.5rem;
   width: 100%;
+  align-items: center;
+  box-shadow: 0 0.3rem 2rem rgba(0, 0, 0, 0.1);
+  position: fixed;
+  padding: 0 1rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #fff;
 }
 
 .navbar .logo {
@@ -88,6 +98,10 @@ html {
   font-size: 18px;
   line-height: 20px;
   font-weight: bold;
+}
+
+.navbar .icon {
+  display: none;
 }
 
 .navbar .fa-bars {
@@ -851,16 +865,66 @@ button {
 /* *************************** Mobile Version ***************************************** */
 @media screen and (max-width: 990px) {
   .navbar {
-    padding: 3%;
+    padding: 3% 0;
+  }
+
+  .navbar .logo {
+    margin-left: 3%;
   }
 
   .navbar nav ul li.desktop {
-    display: none;
-  }
-
-  .navbar nav ul li.icon {
     display: block;
   }
+
+  /* .navbar nav ul li.icon {
+		display: block;
+	} */
+
+  .navbar .icon {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 10%;
+    font-size: 2rem;
+    z-index: 1000;
+  }
+
+  .navbar nav {
+    position: fixed;
+    top: -120%;
+    width: 100%;
+    height: 100%;
+    background-color: #6070ff;
+    opacity: 0.9;
+  }
+
+  .fa-times {
+    transform: rotate(180deg);
+  }
+
+  .navbar nav.nav-toggle {
+    top: 0;
+  }
+
+  .navbar nav ul {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .navbar nav ul li {
+    width: 100%;
+  }
+
+  .navbar nav ul li a {
+    display: block;
+    color: #fff;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    font-size: 2.2rem;
+    z-index: 0;
+  }
+
+  /* navbars end */
 
   .works .card .card-skills .ruby {
     display: none;
