@@ -80,6 +80,15 @@ html {
   justify-content: space-between;
   padding: 0 1.5rem;
   width: 100%;
+  align-items: center;
+  box-shadow: 0 0.3rem 2rem rgba(0, 0, 0, 0.1);
+  position: fixed;
+  padding: 0 1rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #fff;
 }
 
 .navbar .logo {
@@ -92,6 +101,12 @@ html {
 
 .navbar .fa-bars {
   color: var(--primary);
+  font-size: 16px;
+}
+
+#icon {
+  display: none;
+  color: var(--primaryColor1);
   font-size: 16px;
 }
 
@@ -851,7 +866,11 @@ button {
 /* *************************** Mobile Version ***************************************** */
 @media screen and (max-width: 990px) {
   .navbar {
-    padding: 3%;
+    padding: 3% 0;
+  }
+
+  .navbar .logo {
+    margin-left: 3%;
   }
 
   .navbar nav ul li.desktop {
