@@ -976,6 +976,30 @@ button {
 		line-height: 24px;
 		color: #b3bac5;
 	}
+
+	.popup-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.popup-container .main-container {
+		max-width: 90%;
+		height: 80%;
+		position: absolute;
+		top: 5%;
+	}
+
+	.image-container .card-image {
+		width: 60rem;
+		height: 30rem;
+		object-fit: cover;
+	}
+
+	.container-secondary {
+		display: flex;
+		justify-content: space-between;
+	}
 }
 
 /* *************************** Mobile Version ***************************************** */
