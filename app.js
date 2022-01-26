@@ -11,9 +11,6 @@ window.addEventListener("scroll", () => {
 	navbar.classList.remove("nav-toggle");
 });
 
-/* ************************** Pop Up  ******************************************* */
-const header = document.querySelector("header");
-
 const works = [
 	{
 		title: "Tonic",
@@ -57,8 +54,10 @@ const works = [
 	},
 ];
 
-const buttons = document.querySelectorAll(".works .btn");
+/* ************************** Pop Up  ******************************************* */
+const header = document.querySelector("header");
 const container = document.querySelector(".popup-container");
+const buttons = document.querySelectorAll(".works .btn");
 
 function close() {
 	container.style.display = "none";
