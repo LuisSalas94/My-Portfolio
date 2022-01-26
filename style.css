@@ -495,7 +495,7 @@ button {
 
 /******************************Pop Up  Ovelay  Starts****************************/
 .popup-container {
-	display: block;
+	display: none;
 	position: fixed;
 	z-index: 1;
 	top: 0;
@@ -509,7 +509,7 @@ button {
 
 .popup-container .main-container {
 	background-color: #f8f8f8;
-	margin: 5rem 1rem;
+	margin: 5rem 10rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -568,6 +568,7 @@ button {
 
 .container-secondary p {
 	font-size: 1rem;
+	width: 70%;
 	line-height: 1.2rem;
 	color: #344563;
 	padding: 0.7rem 0;
@@ -722,7 +723,7 @@ button {
 		padding: 10px;
 		width: 100%;
 		height: 100%;
-		object-fit: fill;
+		object-fit: cover;
 	}
 
 	.works .card .card-container {
@@ -978,9 +979,7 @@ button {
 	}
 
 	.popup-container {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		padding-left: 20%;
 	}
 
 	.popup-container .main-container {
@@ -998,7 +997,7 @@ button {
 
 	.container-secondary {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 	}
 }
 
@@ -1015,10 +1014,6 @@ button {
 	.navbar nav ul li.desktop {
 		display: block;
 	}
-
-	/* .navbar nav ul li.icon {
-		display: block;
-	} */
 
 	.navbar .icon {
 		display: block;
@@ -1081,6 +1076,10 @@ button {
 		margin-top: 30px;
 		width: 100%;
 	}
+
+	.container-secondary p {
+		width: 100%;
+	}
 }
 
 @media screen and (max-width: 500px) {
@@ -1119,5 +1118,11 @@ button {
 	.popup-container .main-container {
 		margin: 30% 1rem;
 		padding: 0.8rem;
+	}
+
+	.container-secondary p {
+		width: 100%;
+		font-size: 1.2rem;
+		line-height: 1.5;
 	}
 }
