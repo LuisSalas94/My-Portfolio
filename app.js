@@ -11,10 +11,12 @@ window.addEventListener("scroll", () => {
 	navbar.classList.remove("nav-toggle");
 });
 
+/* ****************************** Dynamically injected content  ******************* */
+
 const works = [
 	{
 		title: "Tonic",
-		info: ["Ranjeet", " • backend", " • 2021"],
+		info: ["Canopy", " • Backend End Dev", " • 2015"],
 		description:
 			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting",
 		skills: ["html", "css", "javascript", "github", "ruby", "Bootstrap"],
@@ -24,7 +26,7 @@ const works = [
 	},
 	{
 		title: "Multi-Post Stories",
-		info: ["Ranjeet", " • backend", " • 2021"],
+		info: ["Facebook", " • Full Stack Dev", " • 2015"],
 		description:
 			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting",
 		skills: ["html", "css", "javascript", "github", "ruby", "Bootstrap"],
@@ -34,7 +36,7 @@ const works = [
 	},
 	{
 		title: "Facebook 360",
-		info: ["Ranjeet", " • backend", " • 2021"],
+		info: ["Facebook", " • Full Stack Dev", " • 2015"],
 		description:
 			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting",
 		skills: ["html", "css", "javascript", "github", "ruby", "Bootstrap"],
@@ -44,7 +46,7 @@ const works = [
 	},
 	{
 		title: "Uber Navigation",
-		info: ["UBER", " • Lead Developer", " • 2021"],
+		info: ["UBER", " • Lead Developer", " • 2018"],
 		description:
 			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting",
 		skills: ["html", "css", "javascript", "github", "ruby", "Bootstrap"],
@@ -54,7 +56,6 @@ const works = [
 	},
 ];
 
-/* ****************************** Dynamically injected content  ******************* */
 const projectContainer = document.querySelector(".works");
 const header = document.querySelector("header");
 const container = document.querySelector(".popup-container");

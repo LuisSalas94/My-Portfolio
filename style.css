@@ -782,9 +782,9 @@ header.hideNav {
 	}
 
 	.works .card {
-		padding: 10px 20px;
+		padding: 1.5rem;
 		width: 60%;
-		height: 496px;
+		height: 35rem;
 		border-radius: 24px;
 		background: #fff;
 		border: 1px solid #dfe1e6;
@@ -795,8 +795,9 @@ header.hideNav {
 
 	.works .card img {
 		padding: 10px;
+		max-width: 100%;
 		width: 100%;
-		height: 100%;
+		height: auto;
 		object-fit: cover;
 	}
 
@@ -805,7 +806,8 @@ header.hideNav {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		padding: 40px 25px;
+		justify-content: center;
+		padding: 2rem 25px;
 	}
 
 	.works .card .card-container .unique {
@@ -881,7 +883,7 @@ header.hideNav {
 		font-family: Poppins, "Times New Roman", Times, serif;
 		font-style: normal;
 		font-weight: normal;
-		font-size: 16px;
+		font-size: 0.9rem;
 		line-height: 24px;
 		color: var(--neutral);
 	}
@@ -900,6 +902,10 @@ header.hideNav {
 		font-size: 12px;
 		line-height: 16px;
 		color: var(--primary);
+	}
+
+	.works .card button {
+		margin-top: 0.5rem;
 	}
 
 	/* ************************ About Section ******************************** */
@@ -1051,49 +1057,6 @@ header.hideNav {
 		line-height: 24px;
 		color: #b3bac5;
 	}
-
-	/* *************************** Pop Up Section **************************************** */
-
-	/* .popup-container {
-		padding-left: 20%;
-	}
-
-	.popup-container .main-container {
-		max-width: 90%;
-		height: 80%;
-		position: absolute;
-		top: 5%;
-	}
-
-	.image-container {
-		padding: 0 1rem;
-	}
-
-	.image-container .card-image {
-		width: 60rem;
-		height: 30rem;
-		object-fit: cover;
-	}
-
-	.container-secondary {
-		display: flex;
-		justify-content: space-between;
-		align-items: baseline;
-		gap: 0.4rem;
-	}
-
-	.content-container .info {
-		padding: 0.5rem 0;
-	}
-
-	.header {
-		justify-content: space-between;
-		padding: 0;
-	}
-
-	.container-secondary p {
-		font-size: clamp(0.8rem, 2vw, 1rem);
-	} */
 }
 
 /* *************************** Mobile Version ***************************************** */
@@ -1156,6 +1119,20 @@ header.hideNav {
 
 	/* navbars end */
 
+	.works .card {
+		height: 100%;
+		width: 80%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.works .card img {
+		width: 100%;
+		object-fit: cover;
+		height: auto;
+	}
+
 	.works .card .card-skills .ruby {
 		display: none;
 	}
@@ -1188,17 +1165,29 @@ header.hideNav {
 
 	.works {
 		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.works .card {
-		width: 100%;
+		width: auto;
 		height: auto;
 	}
 
 	.works .card img {
 		width: 100%;
-		height: 100%;
+		height: auto;
 		object-fit: cover;
+	}
+
+	.works .card .card-description {
+		font-size: 1.4rem;
+	}
+
+	.works .card-skills ul {
+		width: auto;
 	}
 
 	.header {
