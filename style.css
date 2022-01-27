@@ -529,6 +529,10 @@ button {
 	background-color: rgba(0, 0, 0, 0.3);
 }
 
+.popup-container.showPopUp {
+	display: block;
+}
+
 .popup-container .main-container {
 	background-color: #f8f8f8;
 	margin: 5rem 10rem;

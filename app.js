@@ -54,24 +54,57 @@ const works = [
 	},
 ];
 
-/* ************************** Pop Up  ******************************************* */
+/* ****************************** Dynamically injected content  ******************* */
+const projectContainer = document.querySelector(".works");
 const header = document.querySelector("header");
 const container = document.querySelector(".popup-container");
-const buttons = document.querySelectorAll(".works .btn");
 
-function close() {
-	container.style.display = "none";
-	header.classList.remove("hideNav");
-}
+window.addEventListener("DOMContentLoaded", () => {
+	let project = works.map((item) => {
+		return `
+		<div class="card">
+			<img src=${item.image} alt="" />
+			<div class="card-container swap">
+				<h1>${item.title}</h1>
+				<div class="card-details">
+					<h3>${item.info[0]}</h3>
+					<h4>${item.info[1]}</h4>
+					<h4>${item.info[2]}</h4>
+				</div>
+				<p class="card-description">
+					${item.description}
+				</p>
+				<div class="card-skills">
+					<ul>
+						<li>${item.skills[0]}</li>
+						<li class="ruby">${item.skills[1]}</li>
+						<li>${item.skills[2]}</li>
+						<li>${item.skills[3]}</li>
+					</ul>
+				</div>
+					<button class="btn" id="workbtn">see project</button>
+			</div>
+		</div>
+		`;
+	});
 
-function open(index) {
-	// Destructuring
-	const { title, info, description, skills, image } = works[index];
-	const [info1, info2, info3] = info;
-	const [skill1, skill2, skill3, skill4, skill5, skill6] = skills;
+	project = project.join("");
+	projectContainer.innerHTML = project;
+	/* *********************** Pop UP Window *************************** */
+	const buttons = document.querySelectorAll("#workbtn");
+	buttons.forEach((btn, index) => {
+		btn.addEventListener("click", () => {
+			open(index);
+		});
+	});
 
-	container.innerHTML = `
-  <div class="main-container">
+	function open(index) {
+		const { title, info, description, skills, image } = works[index];
+		const [info1, info2, info3] = info;
+		const [skill1, skill2, skill3, skill4, skill5, skill6] = skills;
+		const workSection = document.querySelector(".works");
+		container.innerHTML = `
+		<div class="main-container">
 		<div class="content-container">
 		<div class="header">
 			<h1>${title}</h1>
@@ -115,15 +148,13 @@ function open(index) {
 		</div>
 		</div>
   </div>
-  `;
-	container.style.display = "block";
-	header.classList.add("hideNav");
-	const btnClose = document.querySelector("#btn-close");
-	btnClose.addEventListener("click", close);
-}
-
-buttons.forEach((btn, index) => {
-	btn.addEventListener("click", () => {
-		open(index);
-	});
+	`;
+		container.classList.add("showPopUp");
+		workSection.appendChild(container);
+		const btnClose = document.querySelector("#btn-close");
+		btnClose.addEventListener("click", close);
+		function close() {
+			container.classList.remove("showPopUp");
+		}
+	}
 });
