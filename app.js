@@ -176,3 +176,7 @@ form.addEventListener("submit", (e) => {
 		showError(email2, "Email must contain only lowercase characteres");
 	}
 });
+
+/* ****************** Local Storage ********************************** */
+const userName = document.querySelector("#name");
+const textMessage = document.querySelector("#text");
