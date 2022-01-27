@@ -160,10 +160,21 @@ window.addEventListener('DOMContentLoaded', () => {
       open(index);
     });
   });
+});
 
-  buttons.forEach((btn, index) => {
-    btn.addEventListener('click', () => {
-      open(index);
-    });
-  });
+/* ******************Form Validation********************************** */
+const form = document.querySelector('#form');
+const email2 = document.querySelector('#email');
+const validation = document.querySelector('.validation');
+
+function showError(input, message) {
+  validation.innerHTML = message;
+}
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const { value } = email2;
+  if (value !== value.toLowerCase()) {
+    showError(email2, 'Email must contain only lowercase characteres');
+  }
 });
