@@ -148,6 +148,13 @@ html {
   padding-top: 5px;
 }
 
+.skills-info ul {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+  color: #6070ff;
+}
+
 .main .main-icons ul {
   display: flex;
   justify-content: space-between;
@@ -243,6 +250,21 @@ html {
   width: 200px;
   display: flex;
   justify-content: space-between;
+}
+
+.info li {
+  font-size: 0.8rem;
+  line-height: 1rem;
+  color: #344563;
+  margin-bottom: 0.4rem;
+}
+
+.skills-info ul li {
+  font-size: 0.9rem;
+  background-color: #ebebff;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
 }
 
 .works .card-skills ul li {
@@ -493,6 +515,175 @@ button {
   color: var(--neutral5);
 }
 
+/******************************  Pop Up  Ovelay  Starts  ****************************/
+.popup-container {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.popup-container.showPopUp {
+  display: block;
+}
+
+.popup-container .main-container {
+  background-color: #f8f8f8;
+  margin: 5rem 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%;
+  border-radius: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 3%;
+}
+
+.header h1 {
+  color: var(--neutral-card);
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 44px;
+}
+
+.header #btn-close {
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: #6b778c;
+  padding-right: 2%;
+}
+
+.info {
+  display: flex;
+  gap: 0.5rem;
+  padding-left: 1.5%;
+}
+
+.image-container {
+  text-align: center;
+  background-color: #e6e7e2;
+}
+
+.image-container .card-image {
+  max-width: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.container-secondary {
+  padding: 0.5rem;
+}
+
+.container-secondary p {
+  font-size: 0.8rem;
+  width: 60%;
+  line-height: 1.3rem;
+  color: #344563;
+  padding: 0.7rem 0;
+}
+
+.buttons-container {
+  display: flex;
+  align-items: center;
+  margin: 0.8rem 0;
+}
+
+.buttons-container button {
+  color: #396df2;
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border: 1.5px solid #396df2;
+  padding: 0.3rem 0.8rem;
+  height: 2.5rem;
+  margin-right: 0.8rem;
+  border-radius: 0.5rem;
+}
+
+header.hideNav {
+  display: none;
+}
+
+.skills-info hr {
+  width: 100%;
+  margin: 0.8rem 0;
+  color: #e6e7e2;
+}
+
+/******************************  Pop Up  Ovelay  Endss  ****************************/
+
+/* *************************** Extra Large Version ***************************************** */
+@media screen and (min-width: 1100px) {
+  /* *************************** Pop Up Section **************************************** */
+
+  .popup-container {
+    padding-left: 20%;
+  }
+
+  .popup-container .main-container {
+    max-width: 90%;
+    height: 80%;
+    position: absolute;
+    top: 5%;
+  }
+
+  .image-container {
+    padding: 0 1rem;
+  }
+
+  .image-container .card-image {
+    width: 60rem;
+    height: 30rem;
+    object-fit: cover;
+  }
+
+  .container-secondary {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+
+  .content-container .info {
+    padding: 0.5rem 0;
+  }
+
+  .header {
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .container-secondary p {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    width: 100%;
+  }
+
+  .skills-info ul {
+    width: 280px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 /* *************************** Desktop Version ***************************************** */
 @media screen and (min-width: 991px) {
   body {
@@ -591,9 +782,9 @@ button {
   }
 
   .works .card {
-    padding: 10px 20px;
+    padding: 1.5rem;
     width: 60%;
-    height: 496px;
+    height: 35rem;
     border-radius: 24px;
     background: #fff;
     border: 1px solid #dfe1e6;
@@ -604,9 +795,10 @@ button {
 
   .works .card img {
     padding: 10px;
+    max-width: 100%;
     width: 100%;
-    height: 100%;
-    object-fit: fill;
+    height: auto;
+    object-fit: cover;
   }
 
   .works .card .card-container {
@@ -614,7 +806,8 @@ button {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 40px 25px;
+    justify-content: center;
+    padding: 2rem 25px;
   }
 
   .works .card .card-container .unique {
@@ -690,7 +883,7 @@ button {
     font-family: Poppins, "Times New Roman", Times, serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 0.9rem;
     line-height: 24px;
     color: var(--neutral);
   }
@@ -709,6 +902,10 @@ button {
     font-size: 12px;
     line-height: 16px;
     color: var(--primary);
+  }
+
+  .works .card button {
+    margin-top: 0.5rem;
   }
 
   /* ************************ About Section ******************************** */
@@ -876,10 +1073,6 @@ button {
     display: block;
   }
 
-  /* .navbar nav ul li.icon {
-		display: block;
-	} */
-
   .navbar .icon {
     display: block;
     cursor: pointer;
@@ -906,6 +1099,10 @@ button {
     top: 0;
   }
 
+  .skills-info ul {
+    width: 100%;
+  }
+
   .navbar nav ul {
     flex-direction: column;
     padding: 2rem;
@@ -926,6 +1123,20 @@ button {
 
   /* navbars end */
 
+  .works .card {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .works .card img {
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+  }
+
   .works .card .card-skills .ruby {
     display: none;
   }
@@ -941,6 +1152,10 @@ button {
     margin-top: 30px;
     width: 100%;
   }
+
+  .container-secondary p {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -950,16 +1165,53 @@ button {
 
   .works {
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .works .card {
-    width: 100%;
+    width: auto;
     height: auto;
   }
 
   .works .card img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
+  }
+
+  .works .card .card-description {
+    font-size: 1.4rem;
+  }
+
+  .skills-info ul {
+    justify-content: space-between;
+    padding: 0.5rem 0;
+  }
+
+  .works .card-skills ul {
+    width: auto;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+  }
+
+  .header h1 {
+    font-size: 2.2rem;
+  }
+
+  .popup-container .main-container {
+    margin: 30% 1rem;
+    padding: 0.8rem;
+  }
+
+  .container-secondary p {
+    width: 100%;
+    font-size: 1.2rem;
+    line-height: 1.5;
   }
 }
