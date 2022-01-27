@@ -193,7 +193,7 @@ function showData(data) {
   email2.value = data.formEmail;
 }
 
-form.addEventListener('keyup', () => {
+form.addEventListener('input', () => {
   const infoObject = {
     formName: userName.value,
     formEmail: email2.value,
