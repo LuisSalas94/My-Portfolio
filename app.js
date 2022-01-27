@@ -1,65 +1,65 @@
-const menu = document.querySelector("#icon");
-const navbar = document.querySelector("nav");
+const menu = document.querySelector('#icon');
+const navbar = document.querySelector('nav');
 /* const header = document.querySelector('header'); */
 
-menu.addEventListener("click", () => {
-  menu.classList.toggle("fa-times");
-  navbar.classList.toggle("nav-toggle");
+menu.addEventListener('click', () => {
+  menu.classList.toggle('fa-times');
+  navbar.classList.toggle('nav-toggle');
 });
 
-window.addEventListener("scroll", () => {
-  menu.classList.remove("fa-times");
-  navbar.classList.remove("nav-toggle");
+window.addEventListener('scroll', () => {
+  menu.classList.remove('fa-times');
+  navbar.classList.remove('nav-toggle');
 });
 
 /* ****************************** Dynamically injected content  ******************* */
 const works = [
   {
-    title: "Tonic",
-    info: ["Canopy", " • Backend End Dev", " • 2015"],
+    title: 'Tonic',
+    info: ['Canopy', ' • Backend End Dev', ' • 2015'],
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled  it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting",
-    skills: ["html", "css", "javascript", "github", "ruby", "Bootstrap"],
-    image: "img/desktop/desktop-img1.jpg",
-    liveLink: "see live",
-    sourceLink: "see source",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled  it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting",
+    skills: ['html', 'css', 'javascript', 'github', 'ruby', 'Bootstrap'],
+    image: 'img/desktop/desktop-img1.jpg',
+    liveLink: 'see live',
+    sourceLink: 'see source',
   },
   {
-    title: "Multi-Post Stories",
-    info: ["Facebook", " • Full Stack Dev", " • 2015"],
+    title: 'Multi-Post Stories',
+    info: ['Facebook', ' • Full Stack Dev', ' • 2015'],
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting",
-    skills: ["html", "css", "javascript", "github", "ruby", "Bootstrap"],
-    image: "img/desktop/desktop-img2.jpg",
-    liveLink: "see live",
-    sourceLink: "see source",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting",
+    skills: ['html', 'css', 'javascript', 'github', 'ruby', 'Bootstrap'],
+    image: 'img/desktop/desktop-img2.jpg',
+    liveLink: 'see live',
+    sourceLink: 'see source',
   },
   {
-    title: "Facebook 360",
-    info: ["Facebook", " • Full Stack Dev", " • 2015"],
+    title: 'Facebook 360',
+    info: ['Facebook', ' • Full Stack Dev', ' • 2015'],
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting",
-    skills: ["html", "css", "javascript", "github", "ruby", "Bootstrap"],
-    image: "img/desktop/desktop-img3.jpg",
-    liveLink: "see live",
-    sourceLink: "see source",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting",
+    skills: ['html', 'css', 'javascript', 'github', 'ruby', 'Bootstrap'],
+    image: 'img/desktop/desktop-img3.jpg',
+    liveLink: 'see live',
+    sourceLink: 'see source',
   },
   {
-    title: "Uber Navigation",
-    info: ["UBER", " • Lead Developer", " • 2018"],
+    title: 'Uber Navigation',
+    info: ['UBER', ' • Lead Developer', ' • 2018'],
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting",
-    skills: ["html", "css", "javascript", "github", "ruby", "Bootstrap"],
-    image: "img/desktop/desktop-img4.jpg",
-    liveLink: "see live",
-    sourceLink: "see source",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting",
+    skills: ['html', 'css', 'javascript', 'github', 'ruby', 'Bootstrap'],
+    image: 'img/desktop/desktop-img4.jpg',
+    liveLink: 'see live',
+    sourceLink: 'see source',
   },
 ];
 
-const projectContainer = document.querySelector(".works");
-const container = document.querySelector(".popup-container");
+const projectContainer = document.querySelector('.works');
+const container = document.querySelector('.popup-container');
 
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener('DOMContentLoaded', () => {
   let project = works.map(
     (item) => `
     <div class="card">
@@ -85,19 +85,21 @@ window.addEventListener("DOMContentLoaded", () => {
           <button class="btn" id="workbtn">see project</button>
       </div>
     </div>
-    `
+    `,
   );
 
-  project = project.join("");
+  project = project.join('');
   projectContainer.innerHTML = project;
   /* *********************** Pop UP Window *************************** */
-  const buttons = document.querySelectorAll("#workbtn");
+  const buttons = document.querySelectorAll('#workbtn');
 
   function open(index) {
-    const { title, info, description, skills, image } = works[index];
+    const {
+      title, info, description, skills, image,
+    } = works[index];
     const [info1, info2, info3] = info;
     const [skill1, skill2, skill3, skill4, skill5, skill6] = skills;
-    const workSection = document.querySelector(".works");
+    const workSection = document.querySelector('.works');
     container.innerHTML = `
     <div class="main-container">
     <div class="content-container">
@@ -144,40 +146,35 @@ window.addEventListener("DOMContentLoaded", () => {
     </div>
   </div>
   `;
-    container.classList.add("showPopUp");
+    container.classList.add('showPopUp');
     workSection.appendChild(container);
-    const btnClose = document.querySelector("#btn-close");
+    const btnClose = document.querySelector('#btn-close');
     function close() {
-      container.classList.remove("showPopUp");
+      container.classList.remove('showPopUp');
     }
-    btnClose.addEventListener("click", close);
+    btnClose.addEventListener('click', close);
   }
 
   buttons.forEach((btn, index) => {
-    btn.addEventListener("click", () => {
-      open(index);
-    });
-  });
-
-  buttons.forEach((btn, index) => {
-    btn.addEventLiform.addEventListener("submit", (e) => { e.preventDefault(); const value = email.value; if (value !== value.toLowerCase()) { showError(email, "Email must contain only lowercase characteres"); } }); function showError(input, message) { validation.innerHTML = message; } stener("click", () => {
+    btn.addEventListener('click', () => {
       open(index);
     });
   });
 });
 
 /* ******************Form Validation********************************** */
-const form = document.querySelector("#form");
-const email = document.querySelector("#email");
-const validation = document.querySelector(".validation");
+const form = document.querySelector('#form');
+const email2 = document.querySelector('#email');
+const validation = document.querySelector('.validation');
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const value = email.value;
-  if (value !== value.toLowerCase()) {
-    showError(email, "Email must contain only lowercase characteres");
-  }
-});
 function showError(input, message) {
   validation.innerHTML = message;
 }
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const { value } = email2;
+  if (value !== value.toLowerCase()) {
+    showError(email2, 'Email must contain only lowercase characteres');
+  }
+});
