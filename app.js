@@ -170,9 +170,9 @@ function showError(input, message) {
 }
 
 form.addEventListener("submit", (e) => {
-	e.preventDefault();
 	const { value } = email2;
 	if (value !== value.toLowerCase()) {
+		e.preventDefault();
 		showError(email2, "Email must contain only lowercase characteres");
 	}
 });
