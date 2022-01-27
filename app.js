@@ -1,5 +1,6 @@
 const menu = document.querySelector("#icon");
 const navbar = document.querySelector("nav");
+const header = document.querySelector("header");
 
 menu.addEventListener("click", () => {
 	menu.classList.toggle("fa-times");
@@ -12,7 +13,6 @@ window.addEventListener("scroll", () => {
 });
 
 /* ****************************** Dynamically injected content  ******************* */
-
 const works = [
 	{
 		title: "Tonic",
@@ -57,42 +57,42 @@ const works = [
 ];
 
 const projectContainer = document.querySelector(".works");
-const header = document.querySelector("header");
 const container = document.querySelector(".popup-container");
 
 window.addEventListener("DOMContentLoaded", () => {
-	let project = works.map((item) => {
-		return `
-		<div class="card">
-			<img src=${item.image} alt="" />
-			<div class="card-container swap">
-				<h1>${item.title}</h1>
-				<div class="card-details">
-					<h3>${item.info[0]}</h3>
-					<h4>${item.info[1]}</h4>
-					<h4>${item.info[2]}</h4>
-				</div>
-				<p class="card-description">
-					${item.description}
-				</p>
-				<div class="card-skills">
-					<ul>
-						<li>${item.skills[0]}</li>
-						<li class="ruby">${item.skills[1]}</li>
-						<li>${item.skills[2]}</li>
-						<li>${item.skills[3]}</li>
-					</ul>
-				</div>
-					<button class="btn" id="workbtn">see project</button>
-			</div>
-		</div>
-		`;
-	});
+	let project = works.map(
+		(item) => `
+    <div class="card">
+      <img src=${item.image} alt="" />
+      <div class="card-container swap">
+        <h1>${item.title}</h1>
+        <div class="card-details">
+          <h3>${item.info[0]}</h3>
+          <h4>${item.info[1]}</h4>
+          <h4>${item.info[2]}</h4>
+        </div>
+        <p class="card-description">
+          ${item.description}
+        </p>
+        <div class="card-skills">
+          <ul>
+            <li>${item.skills[0]}</li>
+            <li class="ruby">${item.skills[1]}</li>
+            <li>${item.skills[2]}</li>
+            <li>${item.skills[3]}</li>
+          </ul>
+        </div>
+          <button class="btn" id="workbtn">see project</button>
+      </div>
+    </div>
+    `
+	);
 
 	project = project.join("");
 	projectContainer.innerHTML = project;
 	/* *********************** Pop UP Window *************************** */
 	const buttons = document.querySelectorAll("#workbtn");
+
 	buttons.forEach((btn, index) => {
 		btn.addEventListener("click", () => {
 			open(index);
@@ -105,51 +105,51 @@ window.addEventListener("DOMContentLoaded", () => {
 		const [skill1, skill2, skill3, skill4, skill5, skill6] = skills;
 		const workSection = document.querySelector(".works");
 		container.innerHTML = `
-		<div class="main-container">
-		<div class="content-container">
-		<div class="header">
-			<h1>${title}</h1>
-			<div id="btn-close" class="fas fa-times"></div>
-		</div>
-		<ul class="info">
-			<li>${info1}</li>
-			<li>${info2}</li>
-			<li>${info3}</li>
-		</ul>
-		<div class="image-container">
-			<img
-			src=${image}
-			class="card-image"
-			alt=""
-			/>
-		</div>
-		<div class="container-secondary">
-			<p>
-			${description}
-			</p>
-			<div class="skills-info">
-				<ul>
-					<li>${skill1}</li>
-					<li>${skill2}</li>
-					<li>${skill3}</li>
-					<li>${skill4}</li>
-					<li>${skill5}</li>
-					<li>${skill6}</li>
-				</ul>
-				<hr class="line">
-				<div class="buttons-container">
-					<button type="button">
-					see live <i class="fas fa-check"></i>
-					</button>
-					<button type="button">
-					see source <i class="fab fa-github"></i>
-					</button>
-				</div>
-			</div>
-		</div>
-		</div>
+    <div class="main-container">
+    <div class="content-container">
+    <div class="header">
+      <h1>${title}</h1>
+      <div id="btn-close" class="fas fa-times"></div>
+    </div>
+    <ul class="info">
+      <li>${info1}</li>
+      <li>${info2}</li>
+      <li>${info3}</li>
+    </ul>
+    <div class="image-container">
+      <img
+      src=${image}
+      class="card-image"
+      alt=""
+      />
+    </div>
+    <div class="container-secondary">
+      <p>
+      ${description}
+      </p>
+      <div class="skills-info">
+        <ul>
+          <li>${skill1}</li>
+          <li>${skill2}</li>
+          <li>${skill3}</li>
+          <li>${skill4}</li>
+          <li>${skill5}</li>
+          <li>${skill6}</li>
+        </ul>
+        <hr class="line">
+        <div class="buttons-container">
+          <button type="button">
+          see live <i class="fas fa-check"></i>
+          </button>
+          <button type="button">
+          see source <i class="fab fa-github"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    </div>
   </div>
-	`;
+  `;
 		container.classList.add("showPopUp");
 		workSection.appendChild(container);
 		const btnClose = document.querySelector("#btn-close");
@@ -158,4 +158,10 @@ window.addEventListener("DOMContentLoaded", () => {
 			container.classList.remove("showPopUp");
 		}
 	}
+
+	buttons.forEach((btn, index) => {
+		btn.addEventListener("click", () => {
+			open(index);
+		});
+	});
 });
