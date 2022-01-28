@@ -197,7 +197,7 @@ form.addEventListener("input", () => {
 		formEmail: email2.value,
 		formMessage: textMessage.value,
 	};
-	setLocalStorage();
+	setLocalStorage(infoObject);
 });
 
 const getData = JSON.parse(localStorage.getItem("formData"));
